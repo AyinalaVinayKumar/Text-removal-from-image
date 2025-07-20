@@ -92,8 +92,10 @@ This project is licensed under the MIT License.
 
 🙌 Author
 Ayinala Vinay Kumar
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vinay-kumar-ayinala/)]
-[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white)](https://github.com/AyinalaVinayKumar)]
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/vinay-kumar-ayinala/)
+
+[![GitHub](https://img.shields.io/badge/GitHub-black?logo=github&logoColor=white)](https://github.com/AyinalaVinayKumar)
 
 
 🌟 Star This Repo
