@@ -52,6 +52,7 @@ source venv/bin/activate  # or venv\\Scripts\\activate (Windows)
 ```bash
 
 pip install -r requirements.txt
+```
 ### 4️⃣ Run the Flask App
 ```
 ```bash
