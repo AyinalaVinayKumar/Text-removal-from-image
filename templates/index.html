@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Remover - Image Cleaner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            max-width: 700px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type=file] {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 12px 30px;
+            background: #00c6ff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #0072ff;
+        }
+
+        .image-preview {
+            margin-top: 30px;
+        }
+
+        .image-preview img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #1d976c;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .download-btn:hover {
+            background: #093637;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧼 Text Remover from Images</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <br>
+            <button type="submit">Upload & Remove Text</button>
+        </form>
+
+        {% if filename %}
+        <div class="image-preview">
+            <h2>✅ Cleaned Image</h2>
+            <img src="{{ url_for('static', filename='output/' + filename) }}" alt="Processed Image">
+            <br>
+            <a href="{{ url_for('download_file', filename=filename) }}" class="download-btn">⬇️ Download Image</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
