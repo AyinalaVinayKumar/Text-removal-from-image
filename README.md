@@ -19,20 +19,17 @@ This project is a **Flask-based web application** that detects and removes text 
 ---
 
 ## 📂 Project Structure
-
-Text-removal-from-image/
-├── text_removal.py # Main Flask backend
-├── templates/
-│ └── index.html # UI (HTML + CSS)
-├── static/
-│ └── output/ # Folder for processed images
-├── uploads/ # Folder for user-uploaded images
-├── README.md # Project README
-└── requirements.txt # Python dependencies
-
-
----
-
+```mermaid
+graph TD;
+    A[Text-removal-from-image/] -->text_removal.py;
+    A -->templates;
+    A -->static;
+    A -->uploads;
+    A -->README.md;
+    A -->requirements.txt;
+    C -->index.html;
+    D -->output;
+```
 ## 🛠️ Installation & Usage
 
 ### 1️⃣ Clone the Repo
